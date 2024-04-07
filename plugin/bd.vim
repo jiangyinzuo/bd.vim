@@ -1,0 +1,6 @@
+command -nargs=1 -complete=customlist,bd#PwdComplete Bd call bd#ChangeToParentDir(getcwd(), <f-args>, 'cd')
+command -nargs=1 -complete=customlist,bd#CfileComplete Bdfile call bd#ChangeToParentDir(expand('%:p:h'), <f-args>, 'cd')
+command -nargs=1 -complete=customlist,bd#PwdComplete Tbd call bd#ChangeToParentDir(getcwd(), <f-args>, 'tcd')
+command -nargs=1 -complete=customlist,bd#CfileComplete Tbdfile call bd#ChangeToParentDir(expand('%:p:h'), <f-args>, 'tcd')
+command -nargs=1 -complete=customlist,bd#PwdComplete Lbd call bd#ChangeToParentDir(getcwd(), <f-args>, 'lcd')
+command -nargs=1 -complete=customlist,bd#CfileComplete Lbdfile call bd#ChangeToParentDir(expand('%:p:h'), <f-args>, 'lcd')
